@@ -1,0 +1,46 @@
+ffmpeg audio format conversions
+https://linuxconfig.org/ffmpeg-audio-format-conversions#h2-1-ogg-to-mp3
+
+=========================================
+ffmpeg tutoriais online
+=========================================
+19 FFmpeg Commands For All Needs
+https://catswhocode.com/ffmpeg-commands/
+
+=====================================
+Converte formato de vídeo para outro formato
+=====================================
+ffmpeg -i LostInTranslation.mkv -codec copy LostInTranslation.mp4
+
+=======================================
+Reduzir o tamanho de um arquivo mp4
+=======================================
+ffmpeg -i input.mp4 -max_muxing_queue_size 9999 -vcodec libx265 -crf 28 output.mp4
+
+========================================
+Reduzir o tamanho de um arquivo mp3
+========================================
+ffmpeg -i aa.mp3 -b:a 96k -map a bb.mp3
+
+==========================
+Convertendo áudios para mp3
+==========================
+$ ffmpeg -i file.m4a file.mp3
+$ ffmpeg -i file.amr file.mp3
+$ ffmpeg -i file.mp4 file.mp3
+$ ffmpeg -i file.3gp file.mp3
+
+==============================
+Recortando parte do áudio mp3
+==============================
+ffmpeg -ss 00:00:40 -t 00:01:15 -i caminho/para/arquivo.mp3 -acodec copy /caminho/para/novo/arquivo.mp3
+
+==============================
+Recortando parte do vídeo
+==============================
+ffmpeg -i nome_do_video.[mp4/avi] -ss 00:00:00 -to 00:00:00 -c copy output.[avi/mp4]
+
+==============================
+extraindo áudio de arquivo mkv
+==============================
+ffmpeg -i file.mkv -vn -c:a libmp3lame -y "saida.mp3"

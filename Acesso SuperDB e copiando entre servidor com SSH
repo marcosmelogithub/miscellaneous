@@ -1,0 +1,20 @@
+================================================
+Acesso ao SuperDB
+================================================
+root
+atlantausa@121
+# ifconfig 192.168.0.198
+# ssh root@192.168.0.198
+
+================================================
+copiar local to servidor Linux Remoto
+================================================
+scp <nome_arq> user@ip:destino
+
+Exemplo copiando um arquivo para uma pasta no SuperDB
+scp <nome_arq> root@192.168.0.198:/root/MMelo/COMPACTA/
+
+================================================
+copiar servidor Linux Remoto to local
+================================================
+scp user@ip:destino/<nome_arq> <destino> 
